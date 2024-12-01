@@ -1,0 +1,21 @@
+# Eureka Server Configuration
+# This file configures the Eureka Server properties
+
+# Server port configuration
+# The default port for Eureka Server is 8761
+server:
+  port: 8761
+
+# Spring application name
+# This is how the application will be identified in the Spring Cloud ecosystem
+spring:
+  application:
+    name: eureka-server
+
+# Eureka specific configuration
+eureka:
+  client:
+    # Don't register the server itself as a client
+    register-with-eureka: false
+    # Don't fetch registry information (since this is the server)
+    fetch-registry: false
